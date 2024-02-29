@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-&psk#na5l=p3q8_a+-$4w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['https://denysneplokhov.vercel.app/', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app']
 
 CSRF_TRUSTED_ORIGINS = ['https://denysneplokhov.vercel.app/']
 
