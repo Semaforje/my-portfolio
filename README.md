@@ -1,2 +1,2 @@
-# my-portfolio
-My portfolio project, created using Django, deployed on Vercel
+# My portfolio
+My portfolio project, created using Django and deployed with Vercel.
