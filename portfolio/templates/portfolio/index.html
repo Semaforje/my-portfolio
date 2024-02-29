@@ -1,0 +1,35 @@
+{% extends "shared/_layout.html" %}
+{% load static %}
+{% block title %}
+    <title>Denys Neplokhov - Projects | denysneplokhov.com</title>
+{% endblock %}
+{% block styles %}
+          <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+{% endblock %}
+{% block content %}
+{% if project_list %}
+<div class="album py-5 bg-dark">
+    <div class="container" id="projects">
+        <div class="row">
+            {% for project in project_list %}
+            <div class="col-md-6">
+                <div class="card h-100 mb-4 shadow-m">
+                    <div class="card-body">
+                        <div class="card-img border border-white" style="background-image:url({{ project.image.url }})">
+                            <div class="img-text-wrapper">
+                                <a class="project-title fs-1 fw-bolder" href="{% url 'portfolio:detail' project.pk %}">{{ project.title }}<span class="card-link"></span></a>
+                                <p class="project-short-desc lh-1">{{ project.short_desc }}</p>
+                                <p class="project-tech-used">{{ project.tech_used.all|join:" | " }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
+{% endblock %}

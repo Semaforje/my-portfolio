@@ -1,0 +1,19 @@
+{% extends "shared/_layout.html" %}
+{% load static %}
+{% block styles %}
+      <link href="{% static 'shared/css/index.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div class="cover-container">
+<div class="inner cover">
+    <p class="lead" >Hey, I'm</p>
+    <h1 class="cover-heading">Denys Neplokhov</h1>
+    <p class="lead">Welcome to my portfolio!</p>
+    <p class="lead">
+        <a href="{% url 'aboutme' %}" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+</div>
+</div>
+
+{% endblock %}
+
