@@ -1,0 +1,96 @@
+{% extends "shared/_layout.html" %}
+{% load static %}
+{% block title %}
+    <title>Denys Neplokhov - About me | denysneplokhov.com</title>
+{% endblock %}
+{% block styles %}
+    <link href="{% static 'shared/css/index.css' %}" rel="stylesheet">
+    <link href="{% static 'shared/css/aboutme.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="section-title">
+            <h1 class="cover-heading">About me:</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 card">
+                <img class="photo mx-auto my-auto card-img border border-white" src="{% static 'photo/Self.png' %}">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content">
+                <p class="text-start">
+                    I'm Denys Neplokhov! A Software Test Engineer from Ukraine.<br><br>
+                    Since June 2013 I worked on ~15 projects in different roles: Manual QA, General QA, QA Team Lead.<br><br>
+                    Since October 2022 I share my knowledge in Quality Assurance with people as a lecturer.<br><br>
+                    Proficient in testing both front- and back-end of Web application I can be considered a Full Stack Test Engineer.<br><br>
+                    Using manual and automated testing I strive to achieve 100% test coverage so that I can be sure of the product's quality.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 pt-4 pt-lg-0 content">
+                    <h2>Skills:</h2>
+                    <div class="row">
+                        <div class="col-lg-6 pt-4 pt-lg-0 content text-start">
+                            Requirements review and analysis<br>
+                            Test design and implementation<br>
+                            Functional/Exploratory/Regression/Compatibility/UI/UX testing<br>
+                            Automated testing using Groovy/Python/Selenium/Playwright<br>
+                            API testing using Swagger/Postman<br>
+                            Database testing<br>
+                            Test documentation creation<br>
+                            Team/Test management<br>
+                            Risk management<br>
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 content text-start">
+                            JIRA, Confluence, Azure DevOps<br>
+                            TestRail, Xray<br>
+                            Developer’s tools<br>
+                            Jenkins, Git<br>
+                            Intellij IDEA, Eclipse, PyCharm, VS Code<br>
+                            SQL Server Management Studio<br>
+                            AWS, VMware, VirtualBox<br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 pt-4 pt-lg-0 content">
+                    <h2>Facts:</h2>
+                    <div class="row">
+                        <div class="col-lg-3 pt-4 pt-lg-0 content">
+                            Improved the Onboarding plan for newcomers that reduced the onboarding time from 3 to 2 months
+                        </div>
+                        <div class="col-lg-3 pt-4 pt-lg-0 content">
+                            Improved estimation process (reduced divergence from 30% to 10%)
+                        </div>
+                        <div class="col-lg-3 pt-4 pt-lg-0 content">
+                            Mentored 12 people
+                        </div>
+                        <div class="col-lg-3 pt-4 pt-lg-0 content">
+                            Conducted 4 courses
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 pt-4 pt-lg-0 content">
+                    <h2>Certifications:</h2>
+                    <p>
+                        <a href="{% static 'pdfs/18-CTFL-142407-06.pdf' %}" target="_blank">ISTQB® Certified Tester, Foundation Level</a>
+                    </p>
+                    <p>
+                        <a href="{% static 'pdfs/19-CTAL-TA-157190-05.pdf' %}" target="_blank">ISTQB® Certified Tester, Advanced Level, Test Analyst</a>
+                    </p>
+                    <p>
+                        <a href="{% static 'pdfs/19-CTAL-TM-162780-06.pdf' %}" target="_blank">ISTQB® Certified Tester, Advanced Level, Test Manager</a>
+                    </p>
+            </div>
+            <p class="lead">
+                <a href="{% url 'portfolio:index' %}" class="btn btn-lg btn-secondary">My projects</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+

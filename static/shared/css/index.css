@@ -1,0 +1,13 @@
+.cover-container {
+    max-width: 42em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+
