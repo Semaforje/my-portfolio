@@ -5,3 +5,4 @@ python-dotenv==1.0.1
 gunicorn==21.2.0
 psycopg2-binary==2.9.9
 whitenoise==6.6.0
+pytest_playwright==0.4.4
