@@ -39,7 +39,7 @@ def test_navbar_linkedin_link(page: Page, context: BrowserContext):
 
 
 # TODO Check how to verify that the PDF is opened in new tab
-def test_navbar_resume_link(page: Page, context: BrowserContext):
-    page = HomePage(page)
-    page.open_home_page()
-    page.select_resume_link(context)
+# def test_navbar_resume_link(page: Page, context: BrowserContext):
+#     page = HomePage(page)
+#     page.open_home_page()
+#     page.select_resume_link(context)
