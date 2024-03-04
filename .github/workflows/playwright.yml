@@ -8,6 +8,7 @@ jobs:
     if: github.event.deployment_status.state == 'success'
     steps:
     - uses: actions/checkout@v4
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
@@ -18,7 +19,7 @@ jobs:
     - name: Ensure browsers are installed
       run: python -m playwright install --with-deps
     - name: Run tests
-      run: pytest
+      run: pytest --base-url https://denysneplokhov.vercel.app/
       env:
         # This might depend on your test-runner
         PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
