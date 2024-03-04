@@ -1,8 +1,8 @@
 name: Django Tests
 
 on:
-  # deployment_status:
-  push:
+  deployment_status:
+  # push:
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
           
-    # if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success'
     steps:
     - uses: actions/checkout@v4
     
